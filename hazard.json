@@ -1,0 +1,47 @@
+{
+ "format": "avsim-studio/1",
+ "params": {
+  "cutT0": 6.5,
+  "cutDur": 2.4,
+  "cutV": 15.0,
+  "pedT0": 11,
+  "pedV": 1.45,
+  "busGo": 17,
+  "cutDs": -4.0,
+  "tgT": 0.9,
+  "mu": 0.8,
+  "cutGap": 12,
+  "cutBrake": 0.0,
+  "pedGap": 4.5,
+  "pedLook": 1,
+  "civil": true
+ },
+ "policy": {},
+ "hazards": [
+  {
+   "x": 115.0,
+   "side": "S",
+   "v": 1.9,
+   "t0": 0.0,
+   "trig": 26.0,
+   "type": "ped"
+  }
+ ],
+ "ego": "planner",
+ "space": {
+  "h0_x": [
+   92,
+   118
+  ],
+  "h0_v": [
+   1.2,
+   2.5
+  ],
+  "h0_trig": [
+   8,
+   30
+  ]
+ },
+ "exposure": 0.02,
+ "why": "Người băng ngang ngoài vạch, bước ra từ phía sau xe buýt đang đỗ (dart-out), cách vạch qua đường vài mét. h0_x [92, 118]: đoạn đường quanh xe buýt (thân xe buýt ~x 100-112) và trước vạch ở x = 122, nơi người đi bộ hay đi tắt. h0_v [1.2, 2.5] m/s: từ đi bộ bình thường (~1.2-1.4 m/s, Knoblauch và cs. 1996) đến bước vội/chạy chậm; trên 2.5 là chạy hẳn. h0_trig [8, 30] m: người bước ra khi xe ta còn cách 8-30 m, tức khe thời gian ~0.7-2.5 s ở 12 m/s, ngắn hơn khe 3-4 s mà người đi bộ thường chấp nhận vì họ không thấy xe sau xe buýt. exposure 0.02 mỗi chuyến: ước lượng thô, một chuyến nội đô đi qua khoảng 5 điểm dừng xe buýt, khoảng 40% lần có xe buýt đang đỗ, và khoảng 1% trong số đó có người băng ra từ sau xe buýt đúng lúc xe ta tới (5 x 0.4 x 0.01 = 0.02); NHTSA xếp dart-out/midblock là một trong các kiểu va chạm người đi bộ phổ biến nhất. Cần dữ liệu quan sát thật để thay con số này."
+}
