@@ -1,4 +1,4 @@
-MSSV: 2A202602507
+MSSV: 02507
 
 # Lab 11 · Scenario Forge — báo cáo
 
